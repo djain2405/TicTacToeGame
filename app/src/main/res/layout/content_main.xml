@@ -5,15 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.divya.tictactoeapp.MainActivity"
+    tools:context="com.my.divya.tictactoeapp.com.my.divya.tictactoeapp.MainActivity"
     tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:fontFamily="cursive"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:text="Take turns to mark the spaces with X and O , get three in a row, column or a diagonal to win!"/>
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/board"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        android:layout_marginTop="@dimen/fab_margin"
         >
-        <TableRow android:layout_width="match_parent" android:layout_height="200dp">
+        <TableRow android:layout_width="match_parent" android:layout_height="400dp">
             <Button
                 android:id="@+id/id1"
                 android:layout_height="match_parent"
@@ -37,7 +53,7 @@
                 android:onClick="move"
                 />
         </TableRow>
-        <TableRow android:layout_width="match_parent" android:layout_height="200dp">
+        <TableRow android:layout_width="match_parent" android:layout_height="400dp">
             <Button
                 android:id="@+id/id4"
                 android:layout_height="match_parent"
@@ -60,7 +76,7 @@
                 android:onClick="move"
                 />
         </TableRow>
-        <TableRow android:layout_width="match_parent" android:layout_height="200dp">
+        <TableRow android:layout_width="match_parent" android:layout_height="400dp">
             <Button
                 android:id="@+id/id7"
                 android:layout_height="match_parent"
@@ -86,6 +102,7 @@
     </TableLayout>
     <TextView
         android:id="@+id/turnText"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
